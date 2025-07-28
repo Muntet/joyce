@@ -88,15 +88,22 @@
       text-align: left;
       font-size: 14px;
       line-height: 1.8;
-      color: #ddd;
       margin-bottom: 20px;
     }
 
+    .info p {
+      margin: 4px 0;
+    }
+
     .info span {
-      color: #fff;
       font-weight: bold;
+      color: #ffffff;
       display: inline-block;
       width: 100px;
+    }
+
+    .info .value {
+      color: #cccccc;
     }
 
     .download-btn {
@@ -113,28 +120,34 @@
       margin-top: 10px;
     }
 
-    .powered-by {
+    .footer-section {
       text-align: center;
       margin-top: 40px;
     }
 
-    .powered-by span {
+    .footer-powered {
       font-size: 12px;
       color: #bbb;
+      margin-bottom: 5px;
     }
 
-    .powered-by img {
-      display: block;
-      margin: 6px auto 0;
-      height: 24px;
+    .footer-logo {
+      height: 20px;
+      margin: 5px auto;
+    }
+
+    .footer-company {
+      font-size: 12px;
+      color: #bbb;
+      margin-top: 4px;
     }
 
     footer {
-      text-align: center;
       font-size: 11px;
       color: #888;
-      margin-top: 25px;
+      margin-top: 20px;
       margin-bottom: 30px;
+      text-align: center;
     }
   </style>
 </head>
@@ -157,24 +170,25 @@
     <div class="valid-msg">This is a valid certificate.</div>
 
     <div class="info">
-      <p><span>Number:</span> 229207</p>
-      <p><span>Issued by:</span> Sharon McCulloch</p>
-      <p><span>Issued to:</span> Brenam Kiprono</p>
-      <p><span>Issue date:</span> 22 August 2023</p>
-      <p><span>Expires:</span> 21 August 2026</p>
-      <p><span>For:</span> HLTAID011 - Provide First Aid & CPR (5hrs) Face-to-Face Training & Assessment (NO ONLINE)</p>
+      <p><span>Number:</span> <span class="value">229207</span></p>
+      <p><span>Issued by:</span> <span class="value">Sharon McCulloch</span></p>
+      <p><span>Issued to:</span> <span class="value">Brenam Kiprono Chebon</span></p>
+      <p><span>Issue date:</span> <span class="value">22 August 2023</span></p>
+      <p><span>Expires:</span> <span class="value">21 August 2026</span></p>
+      <p><span>For:</span> <span class="value">HLTAID011 - Provide First Aid & CPR (5hrs) Face-to-Face Training & Assessment (NO ONLINE)</span></p>
     </div>
 
     <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1OA3szRq2x5ELj00qlIgU8B9XV0nJK4t2" target="_blank">
       Download Full Certificate
     </a>
 
-    <div class="powered-by">
-      <span>Powered by:</span>
-      <img src="https://i.ibb.co/FbX9h692/vasto-logo.png" alt="Vasto Software Logo">
+    <div class="footer-section">
+      <div class="footer-powered">Powered by:</div>
+      <img src="https://i.ibb.co/FbX9h692/vasto-logo.png" alt="Vasto Software Logo" class="footer-logo">
+      <div class="footer-company">Vasto Software Pty Ltd.</div>
     </div>
 
-    <footer>© Vasto Software Pty Ltd. All rights reserved.</footer>
+    <footer>© All rights reserved</footer>
   </div>
 
 </body>

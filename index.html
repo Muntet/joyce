@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Verification Results - Certificate</title>
+  <title>Verification Results – Certificate</title>
   <style>
     body {
       background-color: #1a1a1a;
@@ -23,10 +23,23 @@
       text-transform: uppercase;
     }
 
-    .top-bar img {
-      width: 18px;
-      height: 18px;
+    .small-tick {
+      background-color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-right: 10px;
+      box-shadow: 0 0 4px 1px #00bfff; /* blue glow */
+    }
+
+    .small-tick span {
+      color: #0074cc; /* blue tick */
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
     }
 
     .container {
@@ -35,7 +48,7 @@
       background-color: #2c2c2c;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
 
     h2 {
@@ -43,6 +56,25 @@
       color: #00bfff;
       margin-bottom: 20px;
       text-transform: uppercase;
+    }
+
+    .tick {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .large-tick {
+      background-color: #2ecc71;
+      color: white;
+      font-size: 36px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #00bfff; /* thick blue edge */
     }
 
     .valid-msg {
@@ -59,18 +91,8 @@
 
     .info span {
       font-weight: bold;
-      color: #ccc;
-    }
-
-    .tick {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-
-    .tick img {
-      width: 70px;
-      height: 70px;
+      color: #00bfff;
+      text-transform: uppercase;
     }
 
     .download-btn {
@@ -91,16 +113,6 @@
       background-color: #005fa3;
     }
 
-    .qr {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .qr img {
-      width: 100px;
-      height: 100px;
-    }
-
     footer {
       text-align: center;
       margin-top: 20px;
@@ -112,26 +124,29 @@
 <body>
 
   <div class="top-bar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Blue_check.svg/32px-Blue_check.svg.png" alt="Checkmark">
+    <div class="small-tick"><span>&#10003;</span></div>
     DOCUMENT AUTHENTICITY VERIFICATION
   </div>
 
   <div class="container">
-    <h2>VERIFICATION RESULTS</h2>
+    <h2>Verification Results</h2>
+
     <div class="tick">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/1024px-Yes_Check_Circle.svg.png" alt="Verified">
+      <div class="large-tick">&#10004;</div>
     </div>
+
     <div class="valid-msg">This is a valid certificate.</div>
+
     <div class="info">
       <p><span>Number:</span> 229207</p>
       <p><span>Issued by:</span> Sharon McCulloch</p>
       <p><span>Issued to:</span> Brenam Kiprono Chebon</p>
       <p><span>Issue date:</span> 22 August 2023</p>
       <p><span>Expires:</span> 21 August 2026</p>
-      <p><span>For:</span> HLTAID011 - Provide First Aid & CPR (5hrs) Face-to-Face Training & Assessment (NO ONLINE)</p>
+      <p><span>For:</span> HLTAID011 – Provide First Aid & CPR (5hrs) Face‑to‑Face Training & Assessment (NO ONLINE)</p>
     </div>
 
-    <a class="download-btn" href="https://drive.google.com/file/d/1OA3szRq2x5ELj00qlIgU8B9XV0nJK4t2/view?usp=sharing" target="_blank">
+    <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1OA3szRq2x5ELj00qlIgU8B9XV0nJK4t2" target="_blank">
       Download Full Certificate
     </a>
 

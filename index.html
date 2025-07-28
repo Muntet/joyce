@@ -1,229 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Authenticity Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a; /* Dark background similar to the image */
-            color: #ffffff; /* White text color */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align to the top */
-            min-height: 100vh; /* Minimum height to take full viewport */
-            box-sizing: border-box;
-        }
-
-        .container {
-            background-color: #2a2a2a; /* Slightly lighter dark background for the main content area */
-            width: 90%; /* Adjust width for mobile-like appearance */
-            max-width: 400px; /* Max width for a mobile-like card */
-            margin-top: 20px; /* Space from the top of the screen */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header-bar {
-            background-color: #333333; /* Dark gray for the top bar */
-            color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-bottom: 20px;
-            width: 100%; /* Ensure it spans the full width */
-            box-sizing: border-box;
-        }
-
-        .header-bar .left-icons,
-        .header-bar .right-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-bar .center-text {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        .vastosoft-domain {
-            color: #888888; /* Lighter grey for the domain */
-            font-size: 0.8em;
-        }
-
-        .document-verification-banner {
-            background-color: #3a3a3a; /* Darker grey for the banner */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-            color: #cccccc;
-            text-align: left;
-        }
-
-        .verification-results-heading {
-            color: #3498db; /* Blue color for the main heading */
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .check-mark-container {
-            margin: 20px 0;
-        }
-
-        .check-mark {
-            width: 80px; /* Size of the checkmark image */
-            height: 80px;
-            border-radius: 50%;
-            background-color: #27ae60; /* Green background for the checkmark */
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .check-mark svg {
-            fill: #ffffff; /* White checkmark icon */
-            width: 60px;
-            height: 60px;
-        }
-
-        .valid-certificate-text {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 30px;
-            color: #eeeeee;
-        }
-
-        .details-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .details-table tr {
-            line-height: 1.8;
-        }
-
-        .details-table td:first-child {
-            font-weight: bold;
-            width: 30%; /* Adjust as needed */
-            color: #cccccc;
-        }
-
-        .details-table td:last-child {
-            color: #ffffff;
-        }
-
-        .download-button {
-            background-color: #3498db; /* Blue button */
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            text-decoration: none; /* Remove underline for links */
-            display: inline-block;
-            margin-bottom: 30px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-button:hover {
-            background-color: #2186c6; /* Darker blue on hover */
-        }
-
-        .footer {
-            border-top: 1px solid #444444; /* Separator line */
-            padding-top: 20px;
-            color: #888888; /* Lighter grey for copyright */
-            font-size: 0.8em;
-            text-align: center;
-        }
-
-        .footer .logo-image { /* New class for the image */
-            height: 30px; /* Adjust as needed */
-            margin-bottom: 10px;
-            display: block; /* Make it a block element for spacing */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Responsive top navigation bar for the image's top section */
-        .phone-top-bar {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 15px;
-            font-size: 0.8em;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .phone-top-bar .time {
-            font-weight: bold;
-        }
-        .phone-top-bar .icons {
-            display: flex;
-            gap: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Verification Results – Certificate</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+      max-width: 200px;
+      margin: 20px auto 10px;
+      text-align: center;
+    }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+    .top-bar {
+      background: #000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .small-tick {
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      box-shadow: 0 0 4px 1px #00bfff;
+    }
+    .small-tick span {
+      color: #0074cc;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #2c2c2c;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    h2 {
+      color: #00bfff;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .tick {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .large-base {
+      width: 70px;
+      height: 70px;
+      background: #fff;
+      border-radius: 50%;
+      border: 4px solid #00bfff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .large-base svg {
+      width: 48px;
+      height: 48px;
+    }
+    .valid-msg {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .info {
+      font-size: 16px;
+      text-align: left;
+      line-height: 1.8;
+    }
+    .info span {
+      font-weight: bold;
+      color: #00bfff;
+      text-transform: uppercase;
+    }
+    .download-btn {
+      display: block;
+      width: 100%;
+      background: #0074cc;
+      color: #fff;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #005fa3;
+    }
+    .watermark {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+    footer {
+      font-size: 12px;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="phone-top-bar">
-        <div class="time">06:48</div>
-        <div class="icons">
-            <span>&#9733;</span> <span>&#128276;</span> <span>&#128246;</span> <span>21</span> </div>
+  <div class="logo">
+    <img src="https://vasto.com.au/wp-content/uploads/2023/03/logo-vasto-white.svg" alt="Vasto Software Logo">
+  </div>
+
+  <div class="top-bar">
+    <div class="small-tick"><span>&#10003;</span></div>
+    Document Authenticity Verification
+  </div>
+
+  <div class="container">
+    <h2>Verification Results</h2>
+
+    <div class="tick">
+      <div class="large-base">
+        <svg viewBox="0 0 64 64">
+          <path fill="#2ecc71" d="M16 34l10 10 22-22 6 6-28 28-16-16z"/>
+        </svg>
+      </div>
     </div>
 
-    <div class="container">
-        <div class="header-bar">
-            <div class="left-icons">
-                <span>&#9733;</span> </div>
-            <div class="center-text vastosoft-domain">vastosoft.com</div>
-            <div class="right-icons">
-                <span>&#x21bb;</span> <span>&#9776;</span> </div>
-        </div>
+    <div class="valid-msg">This is a valid certificate.</div>
 
-        <div class="document-verification-banner">
-            &#10003; DOCUMENT AUTHENTICITY VERIFICATION
-        </div>
+    <div class="info">
+      <p><span>Number:</span> 229207</p>
+      <p><span>Issued by:</span> Sharon McCulloch</p>
+      <p><span>Issued to:</span> Brenam Kiprono Chebon</p>
+      <p><span>Issue date:</span> 22 August 2023</p>
+      <p><span>Expires:</span> 21 August 2026</p>
+      <p><span>For:</span> HLTAID011 – Provide First Aid & CPR (5hrs) Face‑to‑Face Training & Assessment (NO ONLINE)</p>
+    </div>
 
-        <h2 class="verification-results-heading">VERIFICATION RESULTS</h2>
+    <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1OA3szRq2x5ELj00qlIgU8B9XV0nJK4t2" target="_blank">
+      Download Full Certificate
+    </a>
 
-        <div class="check-mark-container">
-            <div class="check-mark">
-                <svg viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                </svg>
-            </div>
-        </div>
+    <div class="watermark">© Powered by:https://images.app.goo.gl/JHonCZ5szFeLR49u7 Vasto Software.</div>
+    <footer>© Copyright 2025 Vastro Software Pty ltd.All rights reserved 2025</footer>
+  </div>
 
-        <p class="valid-certificate-text">This is a valid certificate.</p>
-
-        <table class="details-table">
-            <tr>
-                <td>Number:</td>
-                <td>229207</td>
-            </tr>
-            <tr>
-                <td>Issued by:</td>
-                <td>
+</body>
+</html>

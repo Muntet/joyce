@@ -51,15 +51,15 @@
 
     .heading {
       color: #00bfff;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
       margin-bottom: 20px;
       text-transform: uppercase;
     }
 
     .tick-box {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       background-color: #fff;
       border-radius: 50%;
       border: 3px solid #00bfff;
@@ -70,9 +70,9 @@
     }
 
     .tick-box .checkmark {
-      width: 22px;
-      height: 22px;
-      transform: scale(1.4);
+      width: 28px;
+      height: 28px;
+      transform: scale(1.6);
     }
 
     .tick-box .checkmark path {
@@ -84,26 +84,30 @@
       margin-bottom: 25px;
     }
 
-    .info {
-      text-align: left;
+    .details {
       font-size: 14px;
       line-height: 1.8;
-      margin-bottom: 20px;
+      max-width: 480px;
+      margin: 20px auto;
     }
 
-    .info p {
+    .details p {
       margin: 4px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    .info span {
+    .label {
+      width: 130px;
+      color: #fff;
       font-weight: bold;
-      color: #ffffff;
-      display: inline-block;
-      width: 100px;
     }
 
-    .info .value {
-      color: #cccccc;
+    .value {
+      width: calc(100% - 140px);
+      color: #ccc;
+      text-align: left;
     }
 
     .download-btn {
@@ -162,20 +166,20 @@
     <div class="heading">Verification Results</div>
 
     <div class="tick-box">
-      <svg class="checkmark" viewBox="0 0 64 64">
+      <svg class="checkmark" viewBox="10 10 52 52">
         <path d="M16 34l10 10 22-22 6 6-28 28-16-16z" />
       </svg>
     </div>
 
     <div class="valid-msg">This is a valid certificate.</div>
 
-    <div class="info">
-      <p><span>Number:</span> <span class="value">229207</span></p>
-      <p><span>Issued by:</span> <span class="value">Sharon McCulloch</span></p>
-      <p><span>Issued to:</span> <span class="value">Brenam Kiprono Chebon</span></p>
-      <p><span>Issue date:</span> <span class="value">22 August 2023</span></p>
-      <p><span>Expires:</span> <span class="value">21 August 2026</span></p>
-      <p><span>For:</span> <span class="value">HLTAID011 - Provide First Aid & CPR (5hrs) Face-to-Face Training & Assessment (NO ONLINE)</span></p>
+    <div class="details">
+      <p><span class="label">Number</span><span class="value">229207</span></p>
+      <p><span class="label">Issued to:</span><span class="value">Brenam Kiprono Chebon</span></p>
+      <p><span class="label">Issued by:</span><span class="value">Sharon McCulloch</span></p>
+      <p><span class="label">Issue date:</span><span class="value">22 August 2023</span></p>
+      <p><span class="label">Expires:</span><span class="value">21 August 2026</span></p>
+      <p><span class="label">For:</span><span class="value">HLTAID011 – Provide First Aid & CPR (5hrs) Face-to-Face Training & Assessment (NO ONLINE)</span></p>
     </div>
 
     <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1OA3szRq2x5ELj00qlIgU8B9XV0nJK4t2" target="_blank">
@@ -185,10 +189,11 @@
     <div class="footer-section">
       <div class="footer-powered">Powered by:</div>
       <img src="https://i.ibb.co/FbX9h692/vasto-logo.png" alt="Vasto Software Logo" class="footer-logo">
-      <div class="footer-company">Vasto Software Pty Ltd.</div>
+   <div class="footer-company">Vasto Software Pty Ltd.</div>
+   
     </div>
 
-    <footer>© All rights reserved</footer>
+    <footer>Copyright © All rights reserved</footer>
   </div>
 
 </body>
